@@ -36,8 +36,6 @@ def sigmoid(z):
 def infer(X_test, save_dir, output_path):
     test_data_size = len(X_test)
 
-    # Load parameters
-    print('=====Loading Param from %s=====' % save_dir)
     w = np.loadtxt(os.path.join(save_dir, 'w'))
     b = np.loadtxt(os.path.join(save_dir, 'b'))
 

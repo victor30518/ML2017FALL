@@ -35,7 +35,6 @@ def sigmoid(z):
 
 def infer(X_test, save_dir, output_path):
     # Load parameters
-    print('=====Loading Param from %s=====' % save_dir)
     mu1 = np.loadtxt(os.path.join(save_dir, 'mu1'))
     mu2 = np.loadtxt(os.path.join(save_dir, 'mu2'))
     shared_sigma = np.loadtxt(os.path.join(save_dir, 'shared_sigma'))
