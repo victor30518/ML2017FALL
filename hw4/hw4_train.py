@@ -79,5 +79,5 @@ model2 = build_model_2()
 history = model1.fit(x_train, y_train,validation_split=0.1, epochs=2, batch_size=128)
 history = model2.fit(x_train, y_train,validation_split=0.1, epochs=2, batch_size=128)
 
-model1.save_weights("model1_weight")
-model2.save_weights("model2_weight")
+model1.save_weights("model1_weight.h5")
+model2.save_weights("model2_weight.h5")
