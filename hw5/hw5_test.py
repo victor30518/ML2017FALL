@@ -10,8 +10,6 @@ from keras.callbacks import EarlyStopping
 from keras.optimizers import Adam
 from keras.regularizers import l2
 from keras.utils import plot_model
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import normalize
 
 # Load Data
 users_filename = sys.argv[4]

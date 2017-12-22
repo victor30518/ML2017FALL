@@ -9,8 +9,6 @@ from keras.callbacks import EarlyStopping
 from keras.optimizers import Adam
 from keras.regularizers import l2
 from keras.utils import plot_model
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import normalize
 
 import os
 import tensorflow as tf
@@ -45,9 +43,9 @@ def get_model(n_users,n_items, latent_dim=6666):
     return model
 
 # Load Data
-users_filename = "../users.csv"
-train_filname = "../train.csv"
-movies_filname = "../movies.csv"
+users_filename = "users.csv"
+train_filname = "train.csv"
+movies_filname = "movies.csv"
 
 users = pd.read_csv(users_filename, engine='python', sep='::')#.set_index('UserID')
 ratings = pd.read_csv(train_filname, engine='python', sep=',')
@@ -69,7 +67,7 @@ permutation = np.random.permutation(len(x_train))
 x_train, y_train = x_train[permutation], y_train[permutation]
 
 # Training
-model = get_model(6040, 3952, 64)
+model = get_model(6040 + 1, 3952 + 1, 64)
 model.summary()
 model.fit([x_train[:,0], x_train[:,1]], y_train, epochs=23, batch_size=4096)
 
