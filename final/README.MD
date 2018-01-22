@@ -8,4 +8,4 @@ gensim 3.1.0
 # 執行方法
 
 請先cd到src目錄下，輸入以下指令  
-  bash final.sh <testing_data.csv的路徑>
+bash final.sh <testing_data.csv的路徑> 
