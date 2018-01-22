@@ -135,7 +135,7 @@ predict = np.argmax(predict,axis=1)
 predict = predict.squeeze()
 
 # 產生CSV
-filename = "predict/ensemble_4.csv"
+filename = sys.argv[2]
 text = open(filename, "w+")
 s = csv.writer(text,delimiter=',',lineterminator='\n')
 s.writerow(["id","ans"])
